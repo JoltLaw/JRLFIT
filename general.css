@@ -77,6 +77,7 @@ Logo: 0 0.2rem 2rem rgba(0, 0, 0, 0.2);
 body {
   font-family: var(--default-text);
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 /* *:focus::before {
