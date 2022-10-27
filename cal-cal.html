@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css/general.css" />
+    <link rel="stylesheet" href="styles.css/style.css" />
+    <title>Calorie Calculater</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="logo-container">
+        <a href="index.html">
+          <h2>
+            <h2>
+              <span>J</span>
+              <span>.</span>
+              <span>R</span>
+              <span>.</span>
+              <span>L</span>
+              <span>-</span>
+              <span>F</span>
+              <span>I</span>
+              <span>T</span>
+              <span>N</span>
+              <span>E</span>
+              <span>S</span>
+              <span>S</span>
+            </h2>
+          </h2>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a class="btn header-nav-btn" href="">Apps</a>
+        <a class="btn header-nav-btn" href="">Plans</a>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="img-opening-container img-opening-container--cal-cal section"
+      >
+        <div class="page-title">
+          <h2>Calorie Calculater</h2>
+        </div>
+        <span class="image-credit"
+          >Image by
+          <a
+            href="https://unsplash.com/@victoriakosmo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Victoria Shes</a
+          >
+          on
+          <a
+            href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          ></span
+        >
+      </section>
+
+      <section id="inputForm" class="section container">
+        <form
+          class="web-app-input-form grid grid--2-cols cal-cal-input-form"
+          action=""
+          id="cal-cal-form"
+        >
+          <div class="grid grid--2-cols">
+            <div class="inputs grid grid--2-cols">
+              <div class="input-field">
+                <label class="label" for="user_measurement_systems">
+                  measurement Systems:
+                </label>
+                <select class="input" id="user_measurement_systems" required>
+                  <option value="">None Selected</option>
+                  <option value="kg/cm">KG/CM</option>
+                  <option value="inch/pounds">Inch/Pounds</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label class="label" for="user_sex">Sex:</label>
+                <select class="input" id="user_sex" required>
+                  <option value="None">Select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label class="label" for="user_weight">Weight:</label>
+                <input id="user_weight" class="input" type="number" required />
+              </div>
+
+              <div class="input-field">
+                <label class="label" for="user_height">Height:</label>
+                <input id="user_height" class="input" type="number" required />
+              </div>
+
+              <div class="input-field">
+                <label class="label" for="user_age">Age:</label>
+                <input id="user_age" class="input" type="number" required />
+              </div>
+
+              <div class="input-field">
+                <label class="label" for="activityRate">Activity Rate:</label>
+                <select class="input" id="activityRate">
+                  <option value="0">Sedentary</option>
+                  <option value="1">Lightly active</option>
+                  <option value="2">Moderately active</option>
+                  <option value="3">Active</option>
+                  <option value="4">Very active</option>
+                </select>
+              </div>
+
+              <button class="btn input">Calculate!</button>
+            </div>
+          </div>
+          <div class="app-full-dis">
+            <p>
+           <ul>
+           <li>Sedentary (little or no exercise)</li> 
+           <li>Lightly active (exercise 1–3 days/week)</li> 
+           <li>Moderately active (exercise 3–5 days/week)</li> 
+           <li>Active (exercise 6–7 days/week)</li>
+           <li>Very active (hard exercise 6–7 days/week)</li>
+          </ul></p>
+            <p>
+              This Calculater is only meant for getting approximation. More or
+              less activity in a day can effect the amount of calories you
+              require in a day.
+            </p>
+
+            <p>
+              For assessment of what your macros should look like check out my:
+              <a href="#">Macro Calculater</a>
+            </p>
+          </div>
+        </form>
+      </section>
+
+      <section class="section container hidden" id="resaultsContainer">
+        <div class="resualtsinfoContainer grid grid--2-cols">
+          <ul id="resaults" class="resaults">
+          
+          </ul>
+
+
+          <div class="resaultInfo" id="resaultInfo">
+            <h2>Extra Info</h2>
+
+            <p><span class="reminder">Reminder!</span> Be careful when dieting. If you are seeing a lose of more than two poounds over the cours of a week it could be a sign that you are over doing it and depriving your body of its necessary energy intake.</p>
+            
+            <ul>
+
+           <li><p><span class="reminder">Gain weight</span> is Calculated for about a pound every twelve days so as to prevent to much bloating.</p></li> 
+          
+            <li><p><span class="reminder">Maintain weight</span> is exactly what it sounds like being set at the amount of calories you need to stay at your current weight </p></li> 
+          
+            <li><p><span class="reminder">Mild weight</span> loss is set for a rate of about half a pound a week.</p></li> 
+
+            <li><p><span class="reminder">Weight loss</span> is set for a rate of about a pound a week</p></li> 
+
+            <li><p><span class="reminder">Extreme weight</span> loss is set for a rate of about two pounds a week (not advisable for most)</p></li> 
+          
+            <button class="btn" onclick="backToCal()">Back to Calculater</button>
+          </ul>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="logo-container">
+        <h2>
+          <span>J</span>
+          <span>.</span>
+          <span>R</span>
+          <span>.</span>
+          <span>L</span>
+          <span>-</span>
+          <span>F</span>
+          <span>I</span>
+          <span>T</span>
+          <span>N</span>
+          <span>E</span>
+          <span>S</span>
+          <span>S</span>
+        </h2>
+      </div>
+    </footer>
+    <script src="scripts/Calculator_Display.js"></script>
+    <script src="scripts/cal-cal.js"></script>
+  </body>
+</html>
