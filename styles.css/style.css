@@ -4,7 +4,7 @@
       rgba(255, 192, 120, 0.15),
       rgba(255, 192, 120, 0.15)
     ),
-    url(/imgs/Home-Splash.jpg);
+    url(imgs/Home-Splash.jpg);
 }
 
 /* Apps scroll bar styling */
@@ -21,11 +21,11 @@
 /* Calorie Calculator styling */
 
 .img-opening-container--cal-cal {
-  background-image: url(/imgs/victoria-shes-UC0HZdUitWY-unsplash.jpg);
+  background-image: url(imgs/victoria-shes-UC0HZdUitWY-unsplash.jpg);
 }
 
 .cal-cal-input-form {
-  background-image: url(/imgs/lily-banse--YHSwy6uqvk-unsplash.jpg);
+  background-image: url(imgs/lily-banse--YHSwy6uqvk-unsplash.jpg);
 }
 
 .calorie-set {
