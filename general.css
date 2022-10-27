@@ -351,7 +351,6 @@ html {
 .web-app-input-form {
   font-size: 1.6rem;
   padding: 2rem 4rem;
-  /* background-color: var(--purple); */
   border-radius: 0.8rem;
   row-gap: 1rem;
   justify-items: center;
