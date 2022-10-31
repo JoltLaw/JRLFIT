@@ -1,4 +1,5 @@
 // set display for calculator app resaults
+
 setDisplay = function (array) {
   let dataArray = [];
   let i = 0;
