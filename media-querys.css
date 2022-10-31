@@ -183,8 +183,18 @@
     font-family: var(--header);
     font-size: 1.5rem;
     content: "More...";
-    margin: 0 89%;
+    margin: 0 85%;
     align-self: flex-end;
     color: var(#633602);
+  }
+}
+
+@media (max-width: 24em) {
+  .logo-container h2 {
+    font-size: 1rem;
+  }
+
+  .header-nav-btn {
+    font-size: 1.2rem;
   }
 }
