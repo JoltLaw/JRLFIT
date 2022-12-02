@@ -91,10 +91,10 @@ pyr_cal_form.onsubmit = function (e) {
   };
 
   const sets = parseInt(factors.NOS);
-  console.log(sets);
+
 
   const Scheme = calculateSets(sets, factors.ORP, factors.MS);
-  console.table(Scheme);
+  
 
   setDisplay(Scheme);
 
