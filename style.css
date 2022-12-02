@@ -32,3 +32,17 @@
   align-items: center;
   justify-items: center;
 }
+
+/* Pyramid Calculator styling */
+
+.img-opening-container--pyr-cal {
+  background-image: linear-gradient(
+      rgba(255, 192, 120, 0.1),
+      rgba(255, 192, 120, 0.1)
+    ),
+    url(imgs/eduardo-cano-photo-co-gP9rAnGJBRo-unsplash.jpg);
+}
+
+.pyr-cal-input-form {
+  background-image: url(imgs/victor-freitas-Yuv-iwByVRQ-unsplash.jpg);
+}

@@ -1,30 +1,37 @@
 // set display for calculator app resaults
 
-setDisplay = function (array) {
+const setDisplay = (array) => {
   let dataArray = [];
   let i = 0;
 
   // generating displays for each of the pieces of content that need it
-  while (i < array.length) {
+  array.forEach((item) => {
     let dataSetName;
-    let dataSetValue;
+    let dataBody = [];
     let dataSet = document.createElement("li");
     // Adding classes
     dataSet.classList.add("calorie-set", "grid", "grid--2-cols");
     // Grabbing the content from the array being passed in
     dataSetName = array[i].string;
-    dataSetValue = array[i].data;
+    data = item.data;
+
+    // data consturction
+    let dataSetValueNode = document.createElement("h2");
+    dataSetValueNode.textContent = data;
+
     // Creating Nodes
     let datasetNameNode = document.createElement("h2");
     datasetNameNode.textContent = dataSetName;
-    let dataSetValueNode = document.createElement("h2");
     // Appending nodes
-    dataSetValueNode.textContent = dataSetValue;
-    dataSet.append(datasetNameNode, dataSetValueNode);
+    dataSet.appendChild(datasetNameNode);
+    dataSet.appendChild(dataSetValueNode);
+    // console.log(dataBody);
+
     // Pushing to exported array
     dataArray.push(dataSet);
     i++;
-  }
+  });
+
   // exporting array
   dataArray.forEach((data) => {
     resaults.appendChild(data);
@@ -43,7 +50,7 @@ setDisplay = function (array) {
   }, 499);
 };
 
-backToCal = function () {
+const backToCal = () => {
   resaultsContainer.classList.add("fadeOut");
   setTimeout(() => {
     resaultsContainer.classList.add("hidden");

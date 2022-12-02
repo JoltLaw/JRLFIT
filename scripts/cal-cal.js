@@ -6,6 +6,7 @@ const inputForm = document.getElementById("inputForm");
 const resaultsContainer = document.getElementById("resaultsContainer");
 const cal_cal_form = document.getElementById("cal-cal-form");
 const resaults = document.getElementById("resaults");
+
 let user;
 
 cal_cal_form.onsubmit = function (e) {
@@ -80,17 +81,4 @@ cal_cal_form.onsubmit = function (e) {
   ];
 
   setDisplay(diets);
-
-  // contentDisplay.forEach((data) => {
-  //   resaults.appendChild(data);
-  // });
-
-  // inputForm.classList.add("fadeOut");
-  // setTimeout(() => {
-  //   inputForm.classList.add("hidden");
-  //   resaultsContainer.classList.remove("hidden");
-  //   resaultsContainer.classList.add("fadeIn");
-  //   inputForm.classList.remove("fadeOut");
-  //   resaultsContainer.classList.remove("fadeIn");
-  // }, 499);
 };

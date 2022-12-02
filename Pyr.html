@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-querys.css" />
+    <title>Pyramid Calculator</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="logo-container">
+        <a href="index.html">
+          <h2>
+            <span>J</span>
+            <span>.</span>
+            <span>R</span>
+            <span>.</span>
+            <span>L</span>
+            <span>-</span>
+            <span>F</span>
+            <span>I</span>
+            <span>T</span>
+            <span>N</span>
+            <span>E</span>
+            <span>S</span>
+            <span>S</span>
+          </h2>
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a class="btn header-nav-btn" href="">Apps</a>
+        <a class="btn header-nav-btn" href="">Plans</a>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="img-opening-container img-opening-container--pyr-cal section"
+      >
+        <div class="page-title">
+          <h2>Pyramid Calculator</h2>
+        </div>
+        <span class="image-credit"
+          >Photo by
+          <a
+            href="https://unsplash.com/@eduardocanophotoco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Eduardo Cano Photo Co.</a
+          >
+          on
+          <a
+            href="https://unsplash.com/s/photos/barbell?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+            >Unsplash</a
+          >
+        </span>
+      </section>
+      <section id="inputForm" class="section container">
+        <form
+          class="web-app-input-form grid grid--2-cols pyr-cal-input-form"
+          action=""
+          id="pyr_cal_form"
+        >
+          <div class="grid grid--2-cols pyr-cal-web">
+            <div class="inputs grid grid--2-cols">
+              <div class="input-field">
+                <label class="label" for="user_measurement_systems">
+                  measurement Systems:
+                </label>
+                <select class="input" id="user_measurement_systems" required>
+                  <option value="">None Selected</option>
+                  <option value="kg">KG</option>
+                  <option value="pounds">Pounds</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label class="label" for="user_Movement">Movement</label>
+                <select class="input" id="user_Movement" required>
+                  <option value="None">Select</option>
+                  <option value="Squat">Sqaut</option>
+                  <option value="DeadLift">DeadLift</option>
+                  <option value="benchPress">BenchPress</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label class="label" for="user_weight">One Rep Max:</label>
+                <input id="user_ORP" class="input" type="number" required />
+              </div>
+
+              <div class="input-field">
+                <label class="label" for="numberOfSets">Sets:</label>
+                <select class="input" id="numberOfSets">
+                  <option value="0">Three</option>
+                  <option value="1">Four</option>
+                  <option value="2">Five</option>
+                  <option value="3">Six</option>
+                  <option value="4">Seven</option>
+                </select>
+              </div>
+
+              <button class="btn input" >Calculate!</button>
+            </div>
+          </div>
+          <div class="app-full-dis">
+            <ul>
+              <li><strong>3 Sets:</strong> Moderate Weight  8reps, Heavy Weight  5reps, Moderate Weight  8reps</li>
+              <li><strong>4 Sets:</strong> Moderate Weight  8reps, Heavy Weight  5reps, Heavy Weight  5reps, Moderate Weight  8reps</li>
+              <li><strong>5 Sets:</strong> Moderate Weight  8reps, Heavy Weight  5reps, Ultra Heavy Weight  2reps ,Heavy Weight 5reps, Moderate Weight  8reps</li>
+              <li><strong>6 Sets:</strong> Light Weight 10reps, Moderate Weight  8reps, Heavy Weight  5reps, Ultra Heavy Weight  2reps ,Heavy Weight 5reps, Moderate Weight  8reps</li>
+              <li><strong>7 Sets:</strong> Light Weight 10reps, Moderate Weight  8reps, Heavy Weight  5reps, Ultra Heavy Weight  2reps ,Heavy Weight 5reps, Moderate Weight  8reps, Light Weight 10reps</li>
+            </ul>
+
+            <p>
+              Pyramids are a great way to add volume and intensity into your
+              workout. They use a changing weight and rep scheme to make sure
+              that you're properly pushing yourself
+            </p>
+
+            <p>
+              Do to how useful Pyramids are I figured I should include a calculator so that you can plot out your own.
+              </a>
+            </p>
+          </div>
+          <button class="btn input hidden" onclick="openCal()">
+            Open Calculator!
+          </button>
+        </form>
+      </section>
+
+      <section class="section container hidden" id="resaultsContainer">
+        <div class="resualtsinfoContainer grid grid--2-cols">
+          <ul id="resaults" class="resaults">
+          
+          </ul>
+
+
+          <div class="resaultInfo" id="resaultInfo">
+            <h2>Extra Info</h2>
+
+            <p><span class="reminder">Reminder!</span> Be careful when lifting. Remember to take long enough rest periods inbetween sets to reduce risk of injury as low as possible.</p>
+            
+            <ul>
+
+           <li><p><span class="reminder">Light weight</span>When lifting in a range of around ten reps with a light weight it is recommended you take about a two minute rest period between Sets</p></li> 
+          
+            <li><p><span class="reminder">Moderate weight</span> When lifting in the range of around eight reps with a moderate weight it is recommended to take a two to three minute rest period between sets  </p></li> 
+          
+            <li><p><span class="reminder">Heavy weight</span>When lifting in the range of around five reps with a heavy weight it is recommended to take three to five minute rest periods between sets</p></li> 
+
+            <li><p><span class="reminder">Ultra Heavy weight</span>When lifting in the range of around three reps with an ultra heavy weight it is recommended to take four to to five minute rest periods between sets</p></li> 
+          
+            <button class="btn" onclick="backToCal()">Back to Calculater</button>
+          </ul>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="logo-container">
+        <h2>
+          <span>J</span>
+          <span>.</span>
+          <span>R</span>
+          <span>.</span>
+          <span>L</span>
+          <span>-</span>
+          <span>F</span>
+          <span>I</span>
+          <span>T</span>
+          <span>N</span>
+          <span>E</span>
+          <span>S</span>
+          <span>S</span>
+        </h2>
+      </div>
+    </footer>
+    <script src="./scripts/Pyr-cal.js"></script>
+    <script src="./scripts/Calculator_Display.js"></script>
+  </body>
+</html>

@@ -92,12 +92,19 @@
   }
 
   .web-app-input-form .grid {
-    background-image: url(imgs/lily-banse--YHSwy6uqvk-unsplash.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
     padding: 0.5rem 0;
     border-radius: 0.8rem 0.8rem 0 0.8rem 0.8rem;
+  }
+
+  .grid.cal-cal-web {
+    background-image: url(imgs/lily-banse--YHSwy6uqvk-unsplash.jpg);
+  }
+
+  .grid.pyr-cal-web {
+    background-image: url(imgs/victor-freitas-Yuv-iwByVRQ-unsplash.jpg);
   }
 
   .inputs {
@@ -112,6 +119,10 @@
   }
 
   .cal-cal-input-form {
+    background-image: none;
+  }
+
+  .pyr-cal-input-form {
     background-image: none;
   }
 
