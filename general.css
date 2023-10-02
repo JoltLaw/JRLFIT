@@ -78,6 +78,7 @@ body {
   font-family: var(--default-text);
   overflow-x: hidden;
   overflow-y: scroll;
+  backgroundColor: white;
 }
 
 /* *:focus::before {
